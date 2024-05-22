@@ -37,18 +37,32 @@
   <div class="row">
     <div class="col-md-8">
       <h2>Últimas Películas</h2>
-      <!-- Listado de últimas películas -->
-      <div id="latest-movies-list">
+      <div id="latest-movies-list" class="row">
         <!-- Aquí se generará dinámicamente el listado de películas -->
       </div>
     </div>
     <div class="col-md-4">
       <h2>Filtros</h2>
-      <!-- Aquí van los filtros -->
-      <input type="text" class="form-control mb-2" placeholder="Buscar película...">
+      <input id="input-busqueda" type="text" class="form-control mb-2" placeholder="Buscar película...">
       <!-- Filtro por género, año, etc. -->
     </div>
   </div>
+  <form id="form-resena" class="mt-5">
+    <h2>Dejar una reseña</h2>
+    <div class="form-group">
+        <label for="input-titulo">Título de la reseña</label>
+        <input type="text" class="form-control" id="input-titulo" placeholder="Título de la reseña" required>
+    </div>
+    <div class="form-group">
+        <label for="input-comentario">Comentario</label>
+        <textarea class="form-control" id="input-comentario" rows="3" placeholder="Escribe tu comentario..." required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="input-calificacion">Calificación</label>
+        <input type="number" class="form-control" id="input-calificacion" placeholder="Calificación (1-5)" min="1" max="5" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar reseña</button>
+  </form>
 </main>
 
 <!-- Modal para mostrar los detalles de la película -->
@@ -71,7 +85,7 @@
   </div>
 </div>
 
-<footer class="bg-dark text-light text-center py-3">
+<footer class="bg-dark text-light text-center py-3 mt-5">
   <p>&copy; 2024 Reseñas de Películas</p>
 </footer>
 
